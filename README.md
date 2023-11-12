@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="assets/logo.png" width="40%" />
+    <img src="assets/logo.png" width="30%" />
     <h1>Visual Studio Code IOC Extractor</h1>
 </div>
 
