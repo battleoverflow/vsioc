@@ -1,0 +1,93 @@
+{
+    "name": "vsioc",
+    "displayName": "vsioc",
+    "description": "Visual Studio Code IOC Extractor",
+    "version": "1.0.0",
+    "publisher": "azazelm3dj3d",
+    "homepage": "https://github.com/azazelm3dj3d/vsioc",
+    "license": "GPL-3.0",
+    "author": {
+        "name": "azazelm3dj3d",
+        "url": "https://github.com/azazelm3dj3d"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/azazelm3dj3d/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/azazelm3dj3d/vsioc"
+    },
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Visualization"
+    ],
+    "icon": "assets/vsioc.png",
+    "galleryBanner": {
+        "color": "#191919",
+        "theme": "dark"
+    },
+    "keywords": [
+        "visualization",
+        "vsioc",
+        "ioc",
+        "cybersecurity"
+    ],
+    "__metadata": {
+        "publisherDisplayName": "azazelm3dj3d"
+    },
+    "activationEvents": [
+        "onCommand:vsioc.openview.focus",
+        "onView:vsioc.openview"
+    ],
+    "main": "./out/index.js",
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "custom-activitybar",
+                    "title": "vsioc",
+                    "icon": "assets/logo.svg"
+                }
+            ]
+        },
+        "views": {
+            "custom-activitybar": [
+                {
+                    "type": "webview",
+                    "id": "vsioc.openview",
+                    "name": "vsioc",
+                    "contextualTitle": "vsioc"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "vsioc.openview.focus",
+                "category": "vsioc",
+                "title": "Open Sidebar",
+                "icon": "$(clear-all)"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "pretty": "npx prettier --write ."
+    },
+    "devDependencies": {
+        "@types/node": "14.x",
+        "@types/vscode": "^1.61.0",
+        "prettier": "^2.7.1",
+        "typescript": "^4.4.3"
+    },
+    "dependencies": {
+        "ioc-extractor": "^6.0.0"
+    }
+}

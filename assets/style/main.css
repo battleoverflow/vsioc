@@ -1,0 +1,14 @@
+/*
+    Owner: azazelm3dj3d (https://github.com/azazelm3dj3d)
+    Project: vsioc (https://github.com/azazelm3dj3d/vsioc)
+    License: GPL v3
+*/
+
+body,
+html {
+    background-color: transparent;
+}
+
+section {
+    overflow-wrap: break-word;
+}

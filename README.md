@@ -1,2 +1,22 @@
-# vsioc
-Visual Studio code extension that extracts IOCs from the open editor
+<div align="center">
+    <img src="assets/logo.png" width="40%" />
+    <h1>Visual Studio Code IOC Extractor</h1>
+</div>
+
+VSIOC is a real-time Visual Studio Code extension for extracting IOCs, including domains, URLs, emails, mac addresses, and more from the currently open editor.
+
+## Usage
+
+You can install this extension under the VS Code extensions tab by searching "vsioc" or by visiting my [publisher page](https://marketplace.visualstudio.com/publishers/azazelm3dj3d).
+
+Another way to install the extension is by using Visual Studio Code's built-in command prompt. You can open this prompt by pressing `ctrl + p` on your keyboard.
+
+Once the prompt is open, you can install the extension by using the following command:
+
+```
+ext install azazelm3dj3d.vsioc
+```
+
+## Notice
+
+The underlying IOC extraction library was not created by me. If you run into any inconsistencies or issues with the IOC extraction, please refer to libraries repository [here](https://github.com/ninoseki/ioc-extractor).
