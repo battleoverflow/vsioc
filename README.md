@@ -17,6 +17,19 @@ Once the prompt is open, you can install the extension by using the following co
 ext install azazelm3dj3d.vsioc
 ```
 
-## Notice
+Here's a full list of the IOCs currently being extracted:
+
+- URLs
+- IPv4 Addresses
+- IPv6 Addresses
+- Domains
+- Email Addresses
+- MD5 Hashs
+- Sha1 Hashs
+- Sha256 Hashs
+- Sha512 Hashs
+- Mac Addresses
+
+### Notice
 
 The underlying IOC extraction library was not created by me. If you run into any inconsistencies or issues with the IOC extraction, please refer to the library's repository [here](https://github.com/ninoseki/ioc-extractor).
