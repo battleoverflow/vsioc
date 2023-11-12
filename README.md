@@ -19,4 +19,4 @@ ext install azazelm3dj3d.vsioc
 
 ## Notice
 
-The underlying IOC extraction library was not created by me. If you run into any inconsistencies or issues with the IOC extraction, please refer to libraries repository [here](https://github.com/ninoseki/ioc-extractor).
+The underlying IOC extraction library was not created by me. If you run into any inconsistencies or issues with the IOC extraction, please refer to the library's repository [here](https://github.com/ninoseki/ioc-extractor).
