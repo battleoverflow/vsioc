@@ -9,7 +9,7 @@
 import * as vscode from "vscode"
 import { extractIOC } from "ioc-extractor"
 
-export function activate(context: vscode.ExtensionContext) {
+export const activate = (context: vscode.ExtensionContext) => {
     const provider = new CustomSidebarViewProvider(context.extensionUri)
 
     context.subscriptions.push(
@@ -62,11 +62,7 @@ class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 
     constructor(private readonly _extensionUri: vscode.Uri) {}
 
-    resolveWebviewView(
-        webviewView: vscode.WebviewView,
-        context: vscode.WebviewViewResolveContext<unknown>,
-        token: vscode.CancellationToken
-    ): void | Thenable<void> {
+    resolveWebviewView(webviewView: vscode.WebviewView): void | Thenable<void> {
         this._view = webviewView
 
         webviewView.webview.options = {
@@ -75,7 +71,6 @@ class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
             localResourceRoots: [this._extensionUri]
         }
 
-        // default webview
         webviewView.webview.html = this.getHtmlContent(webviewView.webview)
 
         // Interval to update HTML webview, runs every seconds
@@ -98,7 +93,7 @@ class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
     }
 }
 
-function getHtml(stylesheetUri: vscode.Uri) {
+const getHtml = (stylesheetUri: vscode.Uri) => {
     const iocUrls = getIOCs("url")
     const iocIpv4s = getIOCs("ipv4")
     const iocIpv6s = getIOCs("ipv6")
@@ -155,7 +150,7 @@ function getHtml(stylesheetUri: vscode.Uri) {
   `
 }
 
-function getIOCs(typeOfIoc: string): string {
+const getIOCs = (typeOfIoc: string): string => {
     const activeTextEditor: vscode.TextEditor | undefined =
         vscode.window.activeTextEditor
 
@@ -222,4 +217,4 @@ const iocExtractor = (
 }
 
 // Deactivate extension
-export function deactivate() {}
+export const deactivate = () => {}
