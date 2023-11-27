@@ -2,7 +2,7 @@
     "name": "vsioc",
     "displayName": "vsioc",
     "description": "Visual Studio Code IOC Extractor",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "azazelm3dj3d",
     "homepage": "https://github.com/azazelm3dj3d/vsioc",
     "license": "GPL-3.0",
