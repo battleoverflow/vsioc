@@ -3,7 +3,7 @@
     <h1>Visual Studio Code IOC Extractor</h1>
 </div>
 
-VSIOC is a real-time Visual Studio Code extension for extracting IOCs, including domains, URLs, emails, mac addresses, and more from the currently open editor.
+VSIOC is a real-time Visual Studio Code extension for extracting IOCs, including domains, URLs, emails, mac addresses, and more from the active open editor.
 
 ## Usage
 
