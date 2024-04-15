@@ -2,23 +2,23 @@
     "name": "vsioc",
     "displayName": "vsioc",
     "description": "Visual Studio Code IOC Extractor",
-    "version": "1.0.1",
-    "publisher": "azazelm3dj3d",
-    "homepage": "https://github.com/azazelm3dj3d/vsioc",
+    "version": "1.0.2",
+    "publisher": "battleoverflow",
+    "homepage": "https://github.com/battleoverflow/vsioc",
     "license": "GPL-3.0",
     "author": {
-        "name": "azazelm3dj3d",
-        "url": "https://github.com/azazelm3dj3d"
+        "name": "battleoverflow",
+        "url": "https://github.com/battleoverflow"
     },
     "funding": [
         {
             "type": "github",
-            "url": "https://github.com/sponsors/azazelm3dj3d/"
+            "url": "https://github.com/sponsors/battleoverflow/"
         }
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/azazelm3dj3d/vsioc"
+        "url": "https://github.com/battleoverflow/vsioc"
     },
     "engines": {
         "vscode": "^1.61.0"
@@ -38,7 +38,7 @@
         "cybersecurity"
     ],
     "__metadata": {
-        "publisherDisplayName": "azazelm3dj3d"
+        "publisherDisplayName": "battleoverflow"
     },
     "activationEvents": [
         "onCommand:vsioc.openview.focus",

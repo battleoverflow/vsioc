@@ -7,14 +7,14 @@ VSIOC is a real-time Visual Studio Code extension for extracting IOCs, including
 
 ## Usage
 
-You can install this extension under the VS Code extensions tab by searching "vsioc" or by visiting my [publisher page](https://marketplace.visualstudio.com/publishers/azazelm3dj3d).
+You can install this extension under the VS Code extensions tab by searching "vsioc" or by visiting my [publisher page](https://marketplace.visualstudio.com/publishers/battleoverflow).
 
 Another way to install the extension is by using Visual Studio Code's built-in command prompt. You can open this prompt by pressing `ctrl + p` on your keyboard.
 
 Once the prompt is open, you can install the extension by using the following command:
 
 ```
-ext install azazelm3dj3d.vsioc
+ext install battleoverflow.vsioc
 ```
 
 Here's a full list of the IOCs currently being extracted:

@@ -1,6 +1,6 @@
 /*
-    Owner: azazelm3dj3d (https://github.com/azazelm3dj3d)
-    Project: vsioc (https://github.com/azazelm3dj3d/vsioc)
+    Owner: battleoverflow (https://github.com/battleoverflow)
+    Project: vsioc (https://github.com/battleoverflow/vsioc)
     License: GPL v3
 */
 
