@@ -2,7 +2,7 @@
     "name": "vsioc",
     "displayName": "vsioc",
     "description": "Visual Studio Code IOC Extractor",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "battleoverflow",
     "homepage": "https://github.com/battleoverflow/vsioc",
     "license": "GPL-3.0",

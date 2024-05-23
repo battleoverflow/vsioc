@@ -53,6 +53,21 @@ export const activate = (context: vscode.ExtensionContext) => {
         if (!activeTextEditor) return
         if (!activeTextEditor.document.uri.fsPath) return
     }
+
+    // Small message to signify the activation of the extension
+    // Apparently, VS Code decided to not include new lines in their notification API for the corner notifications
+    // So for now, we're just gonna have to put everything on the same line
+    const githubUrl = "github.com/battleoverflow"
+
+    vscode.window
+        .showInformationMessage("VSIOC Activated", githubUrl)
+        .then((selection) => {
+            if (selection === githubUrl) {
+                vscode.env.openExternal(
+                    vscode.Uri.parse(`https://${githubUrl}`)
+                )
+            }
+        })
 }
 
 class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
@@ -113,36 +128,35 @@ const getHtml = (stylesheetUri: vscode.Uri) => {
       </head>
       <body>
         <section>
+            <h2>URLs:</h2>
+            <p>${iocUrls}</p>
 
-          <h2>URLs:</h2>
-          <p>${iocUrls}</p>
+            <h2>IPv4s:</h2>
+            <p>${iocIpv4s}</p>
 
-          <h2>IPv4s:</h2>
-          <p>${iocIpv4s}</p>
+            <h2>Ipv6s:</h2>
+            <p>${iocIpv6s}</p>
 
-          <h2>Ipv6s:</h2>
-          <p>${iocIpv6s}</p>
+            <h2>Domains:</h2>
+            <p>${iocDomains}</p>
 
-          <h2>Domains:</h2>
-          <p>${iocDomains}</p>
+            <h2>Emails:</h2>
+            <p>${iocEmails}</p>
 
-          <h2>Emails:</h2>
-          <p>${iocEmails}</p>
+            <h2>MD5s:</h2>
+            <p>${iocMd5s}</p>
 
-          <h2>MD5s:</h2>
-          <p>${iocMd5s}</p>
+            <h2>Sha1s:</h2>
+            <p>${iocSha1s}</p>
 
-          <h2>Sha1s:</h2>
-          <p>${iocSha1s}</p>
+            <h2>Sha256s:</h2>
+            <p>${iocSha256s}</p>
 
-          <h2>Sha256s:</h2>
-          <p>${iocSha256s}</p>
+            <h2>Sha512s:</h2>
+            <p>${iocSha512s}</p>
 
-          <h2>Sha512s:</h2>
-          <p>${iocSha512s}</p>
-
-          <h2>Mac Addresses:</h2>
-          <p>${iocMacAddresses}</p>
+            <h2>Mac Addresses:</h2>
+            <p>${iocMacAddresses}</p>
 
         </section>
       </body>
@@ -158,30 +172,8 @@ const getIOCs = (typeOfIoc: string): string => {
 
     const document: vscode.TextDocument = activeTextEditor.document
 
-    switch (typeOfIoc) {
-        case "url":
-            return JSON.stringify(iocExtractor(document, "url"))
-        case "ipv4":
-            return JSON.stringify(iocExtractor(document, "ipv4"))
-        case "ipv6":
-            return JSON.stringify(iocExtractor(document, "ipv6"))
-        case "domain":
-            return JSON.stringify(iocExtractor(document, "domain"))
-        case "email":
-            return JSON.stringify(iocExtractor(document, "email"))
-        case "md5":
-            return JSON.stringify(iocExtractor(document, "md5"))
-        case "sha1":
-            return JSON.stringify(iocExtractor(document, "sha1"))
-        case "sha256":
-            return JSON.stringify(iocExtractor(document, "sha256"))
-        case "sha512":
-            return JSON.stringify(iocExtractor(document, "sha512"))
-        case "mac":
-            return JSON.stringify(iocExtractor(document, "mac"))
-        default:
-            return JSON.stringify(iocExtractor(document, ""))
-    }
+    // Extract IOCs based on the type of IOC
+    return JSON.stringify(iocExtractor(document, typeOfIoc))
 }
 
 const iocExtractor = (
