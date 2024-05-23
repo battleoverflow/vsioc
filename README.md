@@ -19,16 +19,16 @@ ext install battleoverflow.vsioc
 
 Here's a full list of the IOCs currently being extracted:
 
--   URLs
--   IPv4 Addresses
--   IPv6 Addresses
--   Domains
--   Email Addresses
--   MD5 Hashs
--   Sha1 Hashs
--   Sha256 Hashs
--   Sha512 Hashs
--   Mac Addresses
+- URLs
+- IPv4 Addresses
+- IPv6 Addresses
+- Domains
+- Email Addresses
+- MD5 Hashs
+- Sha1 Hashs
+- Sha256 Hashs
+- Sha512 Hashs
+- Mac Addresses
 
 ### Notice
 
